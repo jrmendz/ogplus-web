@@ -1,0 +1,312 @@
+html,
+a {
+  cursor: url('https://static.oriental-game.com/image/cursor.png'), auto;
+}
+
+a,
+label,
+button,
+.cursor,
+.filter li,
+.v-tabs__icon,
+.betting__area,
+.settings__ui li,
+.language__list li,
+.language__list .list,
+.list__ui .--is-icon,
+.channel__drawer ul li,
+.setting__road__map img,
+.side__betting__area li,
+.super__switch .slider,
+.emoji__box li,
+.card__box.moneywheel .card__table,
+.v-input--selection-controls__ripple,
+.v-input--selection-controls__input input {
+
+  &:hover {
+    cursor: url('https://static.oriental-game.com/image/pointer.png'), auto !important;
+  }
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+html,
+body {
+  overflow: hidden;
+  // background: $base-color;
+  user-select: none;
+}
+
+.ingame {
+  transform: translateX(0) !important;
+  // @include transform(translateX(0) !important);
+}
+
+.--is-ingame {
+  @include rem(padding, 0 0 0 230px !important);
+}
+
+div, p, span, li, input, .v-input-group--text-field input {
+  @include rem((
+    font-size: 12px,
+    letter-spacing: 1px
+  ));
+}
+
+// Reset vuetify css here
+
+.application {
+  // @include transition( filter ease-in .3s );
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-image: url('https://static.oriental-game.com/image/translucent.png') !important;
+  font-family: $default-font !important;
+  // background-color: $base-color !important;
+  transition: filter ease-in .3s;
+
+  &.ko {
+
+    .v-navigation-drawer {
+
+      .list__ui {
+
+        > li {
+          &:first-child {
+            @include rem(font-size, 10px);
+          }
+        }
+      }
+
+      .filter {
+
+        .--is-tile {
+
+          li {
+            @include rem((
+              font-size: 8px,
+              padding: 7.5px
+            ));
+          }
+        }
+      }
+    }
+
+    .side__betting__area {
+
+      li {
+
+        p {
+          @include rem(font-size, 11px !important);
+        }
+      }
+    }
+
+    table.v-table tbody td {
+      @include rem(font-size, 11.5px);
+    }
+
+    table.v-table thead th {
+      @include rem(font-size, 11px);
+    }
+
+    .noc__modal.rank__modal .v-table th,
+    .noc__modal.rank__modal .v-table td {
+      @include rem(width, 100px);
+    }
+  }
+
+  &.cn {
+
+    .table__score {
+
+      li {
+        @include rem(padding, 15px 12px);
+
+        span {
+          @include rem(font-size, 11px);
+        }
+      }
+    }
+
+    .side__betting__area {
+
+      li {
+
+        p {
+          @include rem(font-size, 11px !important);
+        }
+      }
+    }
+
+    .checkbox__ui {
+
+      > span {
+        @include rem(font-size, 10px);
+      }
+    }
+
+    .betting__area.--is-dragontiger {
+
+      .--is-tiger {
+
+        .ut__wrap {
+          @include rem(right, -7px !important);
+        }
+      }
+    }
+
+    .card__box .v-card .v-card__actions .list__ui {
+
+      li.--is-number {
+
+        span {
+
+          &:before {
+            @include rem((
+              font-size: 11px,
+              line-height: 7px,
+            ));
+          }
+        }
+      }
+    }
+  }
+
+  &.jp {
+
+    table.v-table tbody td {
+      @include rem(font-size, 11.5px);
+    }
+
+    table.v-table thead th {
+      @include rem(font-size, 11px);
+    }
+
+    .noc__modal.rank__modal .v-table th,
+    .noc__modal.rank__modal .v-table td {
+      @include rem(width, 120px);
+    }
+
+    .side__betting__area {
+
+      li {
+
+        p {
+          @include rem((
+            bottom: 8px !important,
+            font-size: 11px !important,
+            width: 50px
+          ));
+        }
+      }
+    }
+  }
+
+  &.th {
+
+    .side__betting__area {
+
+      li {
+
+        p {
+          @include rem((
+            font-size: 11px !important,
+            width: 55px
+          ));
+        }
+      }
+    }
+  }
+
+  &.id {
+
+    .filter__content .sidebar__card > div .card__body .v-btn.v-btn--outline .v-btn__content {
+      @include rem(font-size, 9px !important);
+    }
+
+    .side__betting__area {
+
+      li {
+
+        p {
+          @include rem((
+            font-size: 11px !important,
+            width: 55px
+          ));
+        }
+      }
+    }
+
+    .betting__timer {
+      @include rem(width, 400px);
+    }
+
+    .table__info label {
+      @include rem(width, 166px !important);
+    }
+
+    .--is-chip-and-button {
+
+      .v-btn__content {
+        @include rem(font-size, 8px !important);
+      }
+    }
+  }
+}
+
+.application--wrap {
+  font-family: $default-font;
+  @include rem(letter-spacing, 1px);
+}
+
+.application--wrap .theme--dark.v-navigation-drawer .divider,
+.application--wrap .theme--dark.v-navigation-drawer:not(.v-navigation-drawer--floating) .v-navigation-drawer__border,
+.theme--dark .v-navigation-drawer .divider,
+.theme--dark .v-navigation-drawer:not(.v-navigation-drawer--floating) .v-navigation-drawer__border {
+  background-color: $border-color;
+}
+
+table.v-table thead th {
+  text-transform: uppercase;
+  font-weight: 700;
+  @include rem((
+    padding: 0 16px !important,
+    font-size: 14px
+  ));
+}
+
+.v-window__container {
+  will-change: height;
+  transition: none;
+  // @include transition(none);
+}
+
+.v-window-item {
+  will-change: transform;
+}
+
+.v-dialog {
+  will-change: transform, opacity;
+}
+
+.v-dialog__content {
+  // z-index: 999 !important;
+}
+
+.v-overlay {
+  width: 100vw;
+  // z-index: 998 !important;
+
+  &:before {
+    background-color: $base-color;
+  }
+}
+
+.v-progress-circular__info {
+  @include rem(font-size, 8px);
+  color: $base-color-inverted;
+}

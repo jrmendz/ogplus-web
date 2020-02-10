@@ -1,0 +1,60 @@
+// $unitless: 14;
+// $font-size-unit: $unitless + 0px;
+// @function rem($valuePixels, $context: $font-size-unit, $em: false, $per: false, $pt: false) {
+
+//   @if (unitless($valuePixels)) {
+//     $valuePixels: $valuePixels * 1px;
+//   }
+
+//   @if (unitless($context)) {
+//     $context: $context * 1px;
+//   }
+
+//   @if $per == true {
+//     $valuePixels: ( $valuePixels * 6.25 * 0.16);
+//     // % and em will behave and compute the same.
+//   }
+
+//   @if $em == true {
+//     // $valuePixels: $valuePixels * 1;
+//     $valuePixels: ( $valuePixels / 0.063 );
+//     // % and em will behave and compute the same.
+//   }
+
+//   @if $pt == true {
+//     $valuePixels: ( $valuePixels * 0.75 * 1.333333 );
+//     // get the value of 1px in 1pt = 0.75 then multiply it by 1.333333 which the default value of pt to px
+//     // https://websemantics.uk/tools/convert-pixel-point-em-rem-percent/
+//     // http://www.endmemo.com/sconvert/pixelpoint.php
+//   }
+
+//   @return  #{$valuePixels / $context}rem;
+// }
+
+// @function calculateRem($size) {
+//   $remSize: $size / 14px;
+//   @return #{$remSize}rem;
+// }
+
+// background: $notification-confirm;
+// color: adaptive-text-color($notification-confirm);
+@function adaptive-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return $base-color; // lighter background return dark color
+  } @else {
+    @return $base-color-inverted; // darker background reutnr light color
+  }
+}
+
+@function nth-value($list, $index) {
+  @return if(length($list) >= $index, nth($list, $index), null);
+}
+
+@function spacer($value) {
+  @if ($value * 2) % 1 != 0 {
+    @warn 'Spacer value must be a multiple of 0.5';
+    @return 'Spacer value must be a multiple of 0.5';
+  } @else {
+    @return $spacer-unit * $value;
+  }
+}

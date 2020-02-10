@@ -1,0 +1,13 @@
+/* eslint-disable */
+require('./dog')
+require('./dragon')
+require('./goat')
+require('./horse')
+require('./monkey')
+require('./pig')
+require('./rabbit')
+require('./rat')
+require('./rooster')
+require('./snake')
+require('./taurus')
+require('./tiger')

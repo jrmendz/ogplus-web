@@ -1,0 +1,52 @@
+// Color Configuration
+$font-size: 16px;
+
+$theme-colors: (
+  'dark': (
+    'color':   #ffffff,  //#abcdff,
+    'info':    #0194EF,
+    'alert':   #c74343,
+    'success': #1bb934,
+    'warning': #FFC02A,
+    'roadmap':  #383a3b,
+    'foreground': #ffffff,
+    'background': #1f2427, //#222831,
+  ),
+  'light': (
+    'color':   #222831,
+    'info':    #0194EF,
+    'alert':   #c74343,
+    'success': #1bb934,
+    'warning': #FFC02A,
+    'roadmap':  #fafafa,
+    'foreground': #ffffff,
+    'background': #f8fcfb,
+  ),
+);
+
+@mixin themify($themes) {
+  @each $theme, $map in $themes {
+    .#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
+// Include this sample to your css
+/*
+.sample {
+  @include themify($theme-colors) {
+    color: themed('color');
+  }
+}
+*/

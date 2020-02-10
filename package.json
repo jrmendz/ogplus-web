@@ -1,0 +1,87 @@
+{
+  "name": "Panda",
+  "version": "3.0.0",
+  "private": true,
+  "description": "A Vue.js project",
+  "author": "Jhameil Ryan Mendoza <jhameil@neworientalclub88.com>",
+  "scripts": {
+    "test": "vue-cli-service serve --mode test",
+    "serve": "vue-cli-service serve --mode development",
+    "serve-test": "vue-cli-service serve --mode staging",
+    "serve-local": "vue-cli-service serve --mode local",
+    "build": "vue-cli-service build",
+    "build-dev": "vue-cli-service build --mode development --dest dist --target app --modern",
+    "build-staging": "vue-cli-service build --mode staging --dest dist --target app --modern",
+    "build-prod": "vue-cli-service build --mode production --dest dist --target app --modern",
+    "lint": "vue-cli-service lint",
+    "svg": "vsvg -s ./public/static/svg/ -t ./src/icons",
+    "local": "vue-cli-service serve --mode local",
+    "staging": "vue-cli-service serve --mode staging"
+  },
+  "dependencies": {
+    "animated-number-vue": "0.1.4",
+    "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
+    "compression-webpack-plugin": "^3.0.0",
+    "core-js": "^2.6.5",
+    "gsap": "2.0.2",
+    "hls.js": "0.12.2",
+    "howler": "2.1.1",
+    "jquery": "3.3.1",
+    "moment": "2.24.0",
+    "paper": "0.12.3",
+    "sails.io.js": "1.2.1",
+    "serve": "^11.2.0",
+    "socket.io-client": "2.2.0",
+    "svgicon": "1.0.3",
+    "vue": "^2.6.10",
+    "vue-axios": "^2.1.3",
+    "vue-browser-detect-plugin": "^0.1.2",
+    "vue-carousel": "^0.18.0",
+    "vue-carousel-3d": "0.1.23",
+    "vue-cookie": "1.1.4",
+    "vue-headful": "2.0.1",
+    "vue-infinite-slide-bar": "1.0.8",
+    "vue-resource": "1.5.1",
+    "vue-router": "^3.0.1",
+    "vue-shortkey": "^3.1.6",
+    "vue-snotify": "3.2.1",
+    "vue-svgicon": "3.2.2",
+    "vue-translate-plugin": "1.2.0",
+    "vuetify": "^1.5.7",
+    "vuex": "^3.0.1",
+    "vuex-pathify": "1.1.3",
+    "webpack-sources": "^1.3.0",
+    "ws-heartbeat": "^1.0.4"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.6.3",
+    "@vue/cli-plugin-babel": "^3.5.1",
+    "@vue/cli-plugin-eslint": "^3.5.1",
+    "@vue/cli-service": "3.8.0",
+    "css-loader": "^1.0.0",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "vue-cli-plugin-vuetify": "0.4.6",
+    "vue-template-compiler": "^2.6.10",
+    "vuetify-loader": "^1.0.5"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 9"
+  ],
+  "engines": {
+    "node": ">= 8.10.x",
+    "npm": ">= 5.6.0"
+  },
+  "license": "MIT"
+}

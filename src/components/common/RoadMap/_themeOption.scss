@@ -1,0 +1,485 @@
+/***
+*    ████████╗██╗  ██╗███████╗███╗   ███╗███████╗
+*    ╚══██╔══╝██║  ██║██╔════╝████╗ ████║██╔════╝
+*       ██║   ███████║█████╗  ██╔████╔██║█████╗
+*       ██║   ██╔══██║██╔══╝  ██║╚██╔╝██║██╔══╝
+*       ██║   ██║  ██║███████╗██║ ╚═╝ ██║███████╗
+*       ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝╚══════╝
+*
+*/
+
+// all blitzy custom style will go here
+
+.b-scroller {
+  //@extend %scroller
+}
+
+.b-scale {
+  @include themify($theme-colors) {
+    background-color: themed('background');
+    color: themed('color');
+  }
+}
+
+.b-select {
+  @include themify($theme-colors) {
+    background-color: themed('background')
+  }
+}
+
+.b-select > ul {
+  @include themify($theme-colors) {
+    border-color: themed('color');
+    background-color: themed('background')
+  }
+
+  > li {
+    @include themify($theme-colors) {
+      border-color: rgba(themed('color'), .3);
+    }
+  }
+}
+
+.b-tabs .b-tab_wrapper > .b_tab-group > .b-tab-active_line {
+  @include themify($theme-colors) {
+    background-color: themed('color');
+  }
+}
+
+.b-tabs .b-tab_wrapper > .b_tab-group > .b-tab {
+  text-decoration: none;
+  background-color: transparent;
+
+  @include themify($theme-colors) {
+    color: themed('color');
+  }
+}
+
+.b-toggle {
+
+  > label {
+    @include themify($theme-colors) {
+      background-color: themed('background');
+      border-color: themed('color');
+    }
+
+    span {
+      @include themify($theme-colors) {
+        color: themed('color');
+      }
+    }
+
+    &:after {
+      @include themify($theme-colors) {
+        background-color: themed('color');
+      }
+    }
+  }
+
+  &.material-ui {
+
+    &.is-success {
+      > input:checked + label {
+        @include themify($theme-colors) {
+          background-color: rgba(lighten(themed('success'), 20%),.85);
+        }
+
+        &:after {
+          @include themify($theme-colors) {
+            background-color: themed('success');
+          };
+        }
+      }
+    }
+  }
+}
+
+.b-checkbox {
+  > input:checked + label span:after {
+    @include themify($theme-colors) {
+      background-color: themed('color');
+    }
+  }
+}
+
+.b-radio {
+  > input:checked + label span:after {
+    @include themify($theme-colors) {
+      background-color: themed('color');
+    }
+  }
+}
+
+.b-button {
+  @include themify($theme-colors) {
+    border-color: themed('color');
+    background-color: themed('background');
+    color: themed('color')
+  }
+}
+
+.b-input {
+
+  > input {
+    @include themify($theme-colors) {
+      border-color: themed('color');
+      background-color: themed('background');
+      color: themed('color')
+    }
+  }
+}
+
+.b-modal {
+
+  > .b-modal_wrapper {
+    @include themify($theme-colors) {
+      background-color: themed('background');
+    }
+  }
+}
+
+.vue-slider {
+
+  &.is-success {
+
+    .vue-slider-rail {
+
+      .vue-slider-process {
+        @include themify($theme-colors) {
+          background-color: themed('success');
+        }
+      }
+
+      .vue-slider-dot {
+
+        .vue-slider-dot-handle {
+          @include themify($theme-colors) {
+            border-color: themed('success');
+          }
+        }
+      }
+    }
+  }
+}
+
+.b-ticker .b-ticker_content .b-ticker_item {
+  color: #fff;
+}
+
+/***
+*     ██████╗██╗   ██╗███████╗████████╗ ██████╗ ███╗   ███╗     ██████╗███████╗███████╗
+*    ██╔════╝██║   ██║██╔════╝╚══██╔══╝██╔═══██╗████╗ ████║    ██╔════╝██╔════╝██╔════╝
+*    ██║     ██║   ██║███████╗   ██║   ██║   ██║██╔████╔██║    ██║     ███████╗███████╗
+*    ██║     ██║   ██║╚════██║   ██║   ██║   ██║██║╚██╔╝██║    ██║     ╚════██║╚════██║
+*    ╚██████╗╚██████╔╝███████║   ██║   ╚██████╔╝██║ ╚═╝ ██║    ╚██████╗███████║███████║
+*     ╚═════╝ ╚═════╝ ╚══════╝   ╚═╝    ╚═════╝ ╚═╝     ╚═╝     ╚═════╝╚══════╝╚══════╝
+*
+*/
+@import './_cards.scss';
+
+* {
+  letter-spacing: 1px;
+}
+
+a {
+  @include themify($theme-colors) {
+    color: themed('color');
+  }
+}
+
+.mx-datepicker svg {
+  @include themify($theme-colors) {
+    fill: themed('color');
+  }
+}
+
+.mx-input {
+  @include themify($theme-colors) {
+    background-color: themed('background');
+    border-color: themed('color');
+    color: themed('color');
+  }
+  border-width: 2px;
+}
+
+.navigator .is-active:before {
+  @include themify($theme-colors) {
+    background-color: themed('success');
+  }
+}
+
+.b-wrap {
+  position: relative;
+  // background-color: rgba(#1f2427, .9);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(0,0,0,0.65) 100%);
+  }
+}
+
+.level-box .level-box-content .level .exp-bar {
+  @include themify($theme-colors) {
+    background-color: rgba(themed('color'), .5) !important;
+  };
+}
+
+.ingame-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+
+  .drawer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding-left: 0;
+
+    > li {
+
+      &:first-child {
+        @include themify($theme-colors) {
+          background-color: themed('background');
+        };
+      }
+
+      &:nth-child(2) {
+        flex: 1 0 445px;
+        max-width: 445px;
+        padding: 10px;
+        @include themify($theme-colors) {
+          background-color: themed('background');
+        };
+      }
+    }
+  }
+}
+
+/***
+*    ████████╗ █████╗ ██████╗ ███████╗
+*    ╚══██╔══╝██╔══██╗██╔══██╗██╔════╝
+*       ██║   ███████║██████╔╝███████╗
+*       ██║   ██╔══██║██╔══██╗╚════██║
+*       ██║   ██║  ██║██████╔╝███████║
+*       ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚══════╝
+*
+*/
+
+.b-tabs .b-tab_wrapper > .b_tab-group > .b-tab {
+  margin: 0 40px !important;
+}
+
+/***
+*    ██████╗  █████╗  ██████╗ ██╗███╗   ██╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗
+*    ██╔══██╗██╔══██╗██╔════╝ ██║████╗  ██║██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║
+*    ██████╔╝███████║██║  ███╗██║██╔██╗ ██║███████║   ██║   ██║██║   ██║██╔██╗ ██║
+*    ██╔═══╝ ██╔══██║██║   ██║██║██║╚██╗██║██╔══██║   ██║   ██║██║   ██║██║╚██╗██║
+*    ██║     ██║  ██║╚██████╔╝██║██║ ╚████║██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║
+*    ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+*
+*/
+.og-pagination {
+
+  li {
+
+    button {
+      @include themify($theme-colors) {
+        background-color: themed('background');
+      };
+      color: #e1cd98;
+      border: 1px solid #e1cd98 !important;
+
+      &.active {
+        background-color: #e1cd98;
+        @include themify($theme-colors) {
+          color: themed('background');
+        };
+      }
+    }
+
+    .b-pagination-more {
+      color: #e1cd98;
+    }
+  }
+}
+
+
+
+/***
+*    ██████╗  ██████╗  █████╗ ██████╗ ███╗   ███╗ █████╗ ██████╗
+*    ██╔══██╗██╔═══██╗██╔══██╗██╔══██╗████╗ ████║██╔══██╗██╔══██╗
+*    ██████╔╝██║   ██║███████║██║  ██║██╔████╔██║███████║██████╔╝
+*    ██╔══██╗██║   ██║██╔══██║██║  ██║██║╚██╔╝██║██╔══██║██╔═══╝
+*    ██║  ██║╚██████╔╝██║  ██║██████╔╝██║ ╚═╝ ██║██║  ██║██║
+*    ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝
+*
+*/
+
+.road > li {
+  @include themify($theme-colors) {
+    background-color: themed('roadmap');
+  };
+}
+
+.road-wrapper {
+  @include themify($theme-colors) {
+    background-color: themed('roadmap');
+  };
+
+  .is-shuffling {
+    @include themify($theme-colors) {
+      background-color: themed('roadmap');
+    };
+  }
+}
+
+.roadmap {
+
+  .bead-wrap {
+
+    span {
+
+      &.is-red {
+
+        &.is-outline {
+          background-image: linear-gradient(#383a3b, #383a3b), radial-gradient(circle at top left, rgba(238, 238, 238, 1),rgba(185,15,0,1) 60%);
+        }
+      }
+
+      &.is-blue {
+
+        &.is-outline {
+          background-image: linear-gradient(#383a3b, #383a3b), radial-gradient(circle at top left, rgba(238, 238, 238, 1),rgba(4,61,175,1) 60%);
+        }
+      }
+
+      &.is-green {
+
+        &.is-outline {
+          background-image: linear-gradient(#383a3b, #383a3b), radial-gradient(circle at top left, rgba(238, 238, 238, 1),rgba(0,104,55,1) 60%);
+        }
+      }
+    }
+  }
+}
+
+
+
+/***
+*     ██████╗  ██████╗  ██████╗ ██████╗ ████████╗██╗██████╗ ███████╗
+*    ██╔════╝ ██╔═══██╗██╔═══██╗██╔══██╗╚══██╔══╝██║██╔══██╗██╔════╝
+*    ██║  ███╗██║   ██║██║   ██║██║  ██║   ██║   ██║██████╔╝███████╗
+*    ██║   ██║██║   ██║██║   ██║██║  ██║   ██║   ██║██╔═══╝ ╚════██║
+*    ╚██████╔╝╚██████╔╝╚██████╔╝██████╔╝   ██║   ██║██║     ███████║
+*     ╚═════╝  ╚═════╝  ╚═════╝ ╚═════╝    ╚═╝   ╚═╝╚═╝     ╚══════╝
+*
+*/
+.goodtips .goodtips__list li {
+  @include themify($theme-colors) {
+    background-color: themed('roadmap');
+    border: 1px solid themed('background')
+  };
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+
+/***
+*    ████████╗ █████╗ ██████╗ ██╗     ███████╗███████╗
+*    ╚══██╔══╝██╔══██╗██╔══██╗██║     ██╔════╝██╔════╝
+*       ██║   ███████║██████╔╝██║     █████╗  ███████╗
+*       ██║   ██╔══██║██╔══██╗██║     ██╔══╝  ╚════██║
+*       ██║   ██║  ██║██████╔╝███████╗███████╗███████║
+*       ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝╚══════╝
+*/
+
+.vuetable-pagination-wrapper {
+  @include themify($theme-colors) {
+    background-color: themed('background');
+  };
+}
+
+table.vuetable {
+  background: transparent
+}
+
+table.vuetable thead th,
+table.vuetable tbody td,
+.og-table thead th,
+.og-table tbody td {
+  @include themify($theme-colors) {
+    color: themed('color');
+  };
+}
+
+.og-table tbody td {
+  font-size: $font-size !important;
+}
+
+.vuetable-body-wrapper {
+  //@extend %scroller
+}
+
+/***
+*    ███╗   ███╗ ██████╗ ██████╗  █████╗ ██╗
+*    ████╗ ████║██╔═══██╗██╔══██╗██╔══██╗██║
+*    ██╔████╔██║██║   ██║██║  ██║███████║██║
+*    ██║╚██╔╝██║██║   ██║██║  ██║██╔══██║██║
+*    ██║ ╚═╝ ██║╚██████╔╝██████╔╝██║  ██║███████╗
+*    ╚═╝     ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
+*/
+
+.is-avatar .level-box .level-box-content .level .level-info .exp-count,
+.is-avatar .level-box .level-box-content .level .account-no {
+  @include themify($theme-colors) {
+    color: themed('color');
+  };
+}
+
+/***
+*     █████╗ ███╗   ██╗██╗███╗   ███╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗███████╗
+*    ██╔══██╗████╗  ██║██║████╗ ████║██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝
+*    ███████║██╔██╗ ██║██║██╔████╔██║███████║   ██║   ██║██║   ██║██╔██╗ ██║███████╗
+*    ██╔══██║██║╚██╗██║██║██║╚██╔╝██║██╔══██║   ██║   ██║██║   ██║██║╚██╗██║╚════██║
+*    ██║  ██║██║ ╚████║██║██║ ╚═╝ ██║██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║███████║
+*    ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
+*/
+
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition-duration: 0.5s;
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+  overflow: hidden;
+}
+
+.slide-left-enter,
+.slide-right-leave-active {
+  opacity: 0;
+  transform: translate(2em, 0);
+}
+
+.slide-left-leave-active,
+.slide-right-enter {
+  opacity: 0;
+  transform: translate(-2em, 0);
+}
